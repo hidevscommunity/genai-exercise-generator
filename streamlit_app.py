@@ -1,8 +1,7 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
-with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 
 # Langchain config
 llm = OpenAI(temperature=0.7, openai_api_key=st.secrets["api_key"], max_tokens=1500)
@@ -13,6 +12,9 @@ st.set_page_config(page_title="Exercise Generator", layout="wide")
 # Streamlit app layout
 st.title(":green[Adaptive Exercise] Generator :mortar_board:")
 
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    
 # App description
 st.subheader(
     "A demonstration of Generative AI's capabilities in Adaptive Learning.",
