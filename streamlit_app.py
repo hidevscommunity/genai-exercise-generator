@@ -23,13 +23,13 @@ st.markdown(
         Click on the **Generate Exercise** button to get an adapted exercise tailored to challenge students according to their skill level.*
 """
 )
-# Add custom CSS to hide the GitHub icon
-hide_github_icon = """
-.stActionButton {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+# # Add custom CSS to hide the GitHub icon
+# hide_github_icon = """
+# .stActionButton {
+#   visibility: hidden;
+# }
+# """
+# st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 # Sidebar form:
 language = st.sidebar.selectbox("Output Language", ("English", "French"))
