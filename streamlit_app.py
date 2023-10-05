@@ -1,6 +1,9 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 # Langchain config
 llm = OpenAI(temperature=0.7, openai_api_key=st.secrets["api_key"], max_tokens=1500)
 
